@@ -11,23 +11,23 @@ const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled
             className={`
                 flex justify-center items-center
 
-                w-[120px] h-auto
-                mx-[2%] my-[1%]
-                px-[2%] py-[1%]
+                w h-auto
+                mx-[0] my-[0]
+                px-[0] py-[0]
 
                 border rounded-lg
 
                 bg-transparent
                 border-transparent
-                text-gray-600
+                text-[var(--text-secondary)]
 
-                text-xl
+                text-[17px]
                 font-semibold
 
                 duration-200 ease-in-out
 
                 transition
-                hover:text-gray-800
+                hover:text-[var(--text-primary)]
                 hover:underline
 
                 transform

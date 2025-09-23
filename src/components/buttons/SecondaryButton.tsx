@@ -18,21 +18,17 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({ text, onClick, disabl
                 border-2
                 rounded-lg
 
-                bg-[var()]
-                border-[var(--color-text)]
-                text-[var(--color-text)]
+                border-[var(--accent-color2)]
+                text-[var(--accent-color2)]
 
                 dm-serif-display
                 text-[20px]
-                font-regular
 
                 duration-200 ease-in-out
 
                 transition
-                hover:bg-gray-200
-                hover:border-gray-600
-                hover:text-black
-                hover:decoration-underline
+                hover:text-[var(--primary-background)]
+                hover:bg-[var(--accent-color2)]
 
                 cursor-pointer
                 ${disabled ? "opacity-50 cursor-not-allowed" : ""}

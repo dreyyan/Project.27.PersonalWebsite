@@ -9,18 +9,17 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = 
         <button className="
         flex justify-center items-center
 
-        w-[120px] h-auto
-        mx-[2%] my-[1%]
-        px-[2%] py-[1%]
+        w-[150px] h-[52px]
+        mx-[0] my-[0]
+        px-[0] py-[0]
 
-        border-3
-        rounded-lg
+        rounded-full
 
-        bg-black
-        border-black
+        bg-[var(--accent-color1)]
         text-white
 
-        text-xl
+        dm-serif-display
+        text-[24px]
         font-semibold
 
         duration-200 ease-in-out

@@ -1,9 +1,9 @@
 const Styles = {
     // Container
     headerContainer:
-    "flex justify-between items-center w-full h-[116px] px-[40px] py-[35px] bg-[var(--color-secondary)]",
+    "flex justify-between items-center w-full h-[116px] px-[40px] py-[35px] bg-[var(--secondary-background)]",
     heroSectionContainer:
-    "flex flex-col w-auto h-auto mx-[74px] my-[45px] px-[0px] py-[0px] bg-[var(--color-text)]",
+    "flex flex-col w-auto h-auto mx-[74px] my-[45px] px-[0px] py-[0px] bg-[var(--primary-background)]",
 
     // Subcontainer
     headerBanner:
@@ -13,9 +13,9 @@ const Styles = {
 
     // Text
     headerNavigationLink:
-    "relative cursor-pointer dm-serif-text text-[20px] transition ease-in-out before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-[var(--color-text)] before:transition-all before:duration-400 hover:before:w-full",
+    "relative cursor-pointer dm-serif-text text-[20px] text-[var(--text-primary)] transition ease-in-out before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:transition-all before:duration-300 hover:before:w-full",
     body:
-    "dm-serif-text "
+    "dm-serif-text text-[var(--text-primary)]"
 };
 
 export default Styles;
