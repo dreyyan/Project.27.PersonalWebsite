@@ -2,9 +2,22 @@ interface TertiaryButtonProps {
     text: string;
     onClick?: () => void;
     disabled?: boolean;
+    href?: string;
 }
 
-const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled = false }) => {
+const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled = false, href }) => {
+    if (href) {
+        return (
+            <a
+                href={href}
+                className={`btn ${disabled ? "btn-disabled" : ""}`}
+                onClick={(e) => disabled && e.preventDefault()}
+            >
+                {text}
+            </a>
+        );
+    }
+
     return (
         <button
             onClick={disabled ? undefined : onClick}

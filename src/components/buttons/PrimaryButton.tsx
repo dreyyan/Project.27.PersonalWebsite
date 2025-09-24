@@ -2,9 +2,22 @@ interface PrimaryButtonProps {
     text: string,
     onClick?: () => void;
     disabled: boolean;
+    href?: string;
 };
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = false}) => {
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = false, href}) => {
+        if (href) {
+        return (
+            <a
+                href={href}
+                className={`btn ${disabled ? "btn-disabled" : ""}`}
+                onClick={(e) => disabled && e.preventDefault()}
+            >
+                {text}
+            </a>
+        );
+    }
+
     return (
         <button className="
         flex justify-center items-center
