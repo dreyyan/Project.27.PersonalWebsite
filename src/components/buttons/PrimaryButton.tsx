@@ -3,9 +3,16 @@ interface PrimaryButtonProps {
     onClick?: () => void;
     disabled: boolean;
     href?: string;
+
+    width?: string;
+    height?: string;
+    borderRadius?: string;
 };
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = false, href}) => {
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = false, href, width = "150px", height = "52px", borderRadius = "100px"}) => {
+    const fontSize = `calc(${height} * 0.6)`;
+
+    const style = { width, height, borderRadius, fontSize };
         if (href) {
         return (
             <a
@@ -19,20 +26,16 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = 
     }
 
     return (
-        <button className="
+        <button style={style} className="
         flex justify-center items-center
 
-        w-[150px] h-[52px]
         mx-[0] my-[0]
         px-[0] py-[0]
-
-        rounded-full
 
         bg-[var(--accent-color1)]
         text-white
 
         dm-serif-display
-        text-[24px]
         font-semibold
 
         duration-200 ease-in-out

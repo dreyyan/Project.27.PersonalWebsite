@@ -1,16 +1,21 @@
 import Header from "./components/Header";
+
+// Components
 import ProjectCard from "./components/ProjectCard";
+import Projects from "./components/Projects";
 
 const Portfolio = () => {
     return (
         <div>
             <Header/>
-            <div className="">
-                <ProjectCard
-                src="test.png"
-                title="My Historical Journey"
-                description="CIPHER R&D Committee Repository: CodeQuest — Sharpen Problem-Solving Skills Step by Step"
-                codeUrl="https://github.com/dreyyan/Project.14.MyHistoricalJourney"/>
+            <div className="flex flex-wrap justify-center items-center gap-x-2">
+                {Projects.map((project, index) => (
+                    <ProjectCard key={index}
+                    src={project.src}
+                    title={project.title}
+                    description={project.description}
+                    codeUrl={project.codeUrl}/>
+                ))}
             </div>
         </div>
     );

@@ -3,12 +3,18 @@ interface TertiaryButtonProps {
     onClick?: () => void;
     disabled?: boolean;
     href?: string;
+
+    fontSize?: string;
+    fontWeight?: string;
 }
 
-const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled = false, href }) => {
+const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled = false, href, fontSize = "14px", fontWeight = "400" }) => {
+    const style =  { fontSize, fontWeight };
+
     if (href) {
         return (
             <a
+                style={style}
                 href={href}
                 className={`btn ${disabled ? "btn-disabled" : ""}`}
                 onClick={(e) => disabled && e.preventDefault()}
@@ -20,11 +26,12 @@ const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled
 
     return (
         <button
+        style={style}
             onClick={disabled ? undefined : onClick}
             className={`
                 flex justify-center items-center
 
-                w h-auto
+                h-auto
                 mx-[0] my-[0]
                 px-[0] py-[0]
 
@@ -33,9 +40,6 @@ const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled
                 bg-transparent
                 border-transparent
                 text-[var(--text-secondary)]
-
-                text-[17px]
-                font-semibold
 
                 duration-200 ease-in-out
 
@@ -49,8 +53,7 @@ const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled
                 cursor-pointer
                 ${disabled ? "opacity-50 cursor-not-allowed" : ""}
             `}
-        >
-            <p className="text-xl">{text}</p>
+        >{text}
         </button>
     );
 }

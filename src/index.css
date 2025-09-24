@@ -38,11 +38,24 @@
   --secondary-background: #2A2A3F;
   --accent-color1: #2AA198;
   --accent-color2: #00FF88;
-  --text-primary: #E6E6FA;
-  --text-secondary: #A9A9B2;
+  --text-primary: hsl(240, 68%, 94%);
+  --text-secondary: #c7c7ce;
+  --icon-color: hsl(240, 68%, 94%);
   --error: #FF5555;
 
   margin: 0;
+}
+
+/* Light Mode */
+[data-theme="light"] {
+  --primary-background: #F5F5F7;      /* Light background */
+  --secondary-background: #EDEDED;    /* Slightly darker background for depth */
+  --accent-color1: #2AA198;           /* Keep same accent for brand consistency */
+  --accent-color2: #00FF88;           /* Keep same accent for highlights */
+  --text-primary: hsl(240, 20%, 20%); /* Dark text for readability */
+  --text-secondary: #6B6B73;          /* Softer secondary text */
+  --icon-color: hsl(240, 20%, 20%); /* Dark blue-gray */
+  --error: #FF5555;                   /* Same error color for consistency */
 }
 
 html, body {
