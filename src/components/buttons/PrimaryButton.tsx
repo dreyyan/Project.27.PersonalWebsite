@@ -41,15 +41,16 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = 
         duration-200 ease-in-out
 
         transition
-        hover:bg-gray-100
-        hover:border-red
-        hover:text-black
+
+        hover:bg-[var(--accent-color2)]
+        hover:text-white
 
         transform 
         hover:scale-105 
         hover:rotate-1 
         
         cursor-pointer
+        disabled:opacity-50 disabled:cursor-not-allowed
         ">{text}
         </button>
     );

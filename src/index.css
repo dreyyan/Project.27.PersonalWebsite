@@ -34,28 +34,29 @@
 }
 
 :root {
-  --primary-background: #1E1E2E;
-  --secondary-background: #2A2A3F;
-  --accent-color1: #2AA198;
-  --accent-color2: #00FF88;
-  --text-primary: hsl(240, 68%, 94%);
-  --text-secondary: #c7c7ce;
-  --icon-color: hsl(240, 68%, 94%);
-  --error: #FF5555;
+  /* Dark Mode Defaults */
+  --primary-background: oklch(22% 0.03 280);   /* deep bluish background */
+  --secondary-background: oklch(28% 0.03 280); /* slightly lighter panel */
+  --accent-color1: oklch(70% 0.12 200);        /* teal */
+  --accent-color2: oklch(80% 0.18 140);        /* bright green */
+  --text-primary: oklch(94% 0.02 280);         /* near-white bluish */
+  --text-secondary: oklch(80% 0.02 280);       /* soft gray-blue */
+  --icon-color: oklch(94% 0.02 280);           /* matches text-primary */
+  --error: oklch(62% 0.25 30);                 /* vivid red */
 
   margin: 0;
 }
 
 /* Light Mode */
 [data-theme="light"] {
-  --primary-background: #F5F5F7;      /* Light background */
-  --secondary-background: #EDEDED;    /* Slightly darker background for depth */
-  --accent-color1: #2AA198;           /* Keep same accent for brand consistency */
-  --accent-color2: #00FF88;           /* Keep same accent for highlights */
-  --text-primary: hsl(240, 20%, 20%); /* Dark text for readability */
-  --text-secondary: #6B6B73;          /* Softer secondary text */
-  --icon-color: hsl(240, 20%, 20%); /* Dark blue-gray */
-  --error: #FF5555;                   /* Same error color for consistency */
+  --primary-background: oklch(97% 0.01 280);   /* very light background */
+  --secondary-background: oklch(92% 0.01 280); /* subtle panel depth */
+  --accent-color1: oklch(55% 0.12 200);        /* same hue/chroma, lower lightness */
+  --accent-color2: oklch(65% 0.18 140);
+  --text-primary: oklch(20% 0.03 280);         /* dark bluish-gray */
+  --text-secondary: oklch(45% 0.02 280);       /* softer muted gray */
+  --icon-color: oklch(40% 0.03 280);           /* same as text-primary */
+  --error: oklch(62% 0.25 30);                 /* same red (works in both) */
 }
 
 html, body {

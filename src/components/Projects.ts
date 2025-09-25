@@ -18,7 +18,7 @@ const Projects = [
         codeUrl: "https://github.com/dreyyan/Project.03.Website-SofDev",
     },
     {
-        src: "test.png",
+        src: "quizmake-preview.png",
         title: "QuizMake",
         description: "Quiz Desktop Application for Students/Learners",
         codeUrl: "https://github.com/dreyyan/Project.04.QuizMake",
@@ -30,37 +30,37 @@ const Projects = [
         codeUrl: "https://github.com/dreyyan/Project.05.Exodia",
     },
     {
-        src: "test.png",
+        src: "vicalc-preview.png",
         title: "ViCalc",
         description: "Dynamic Text-based Virtual Calculator ",
         codeUrl: "https://github.com/dreyyan/Project.06.ViCalc",
     },
     {
-        src: "test.png",
+        src: "automa-preview.png",
         title: "A.U.T.O.M.A.",
         description: "Advanced Utility Task-Optimized Machine Assistant",
         codeUrl: "https://github.com/dreyyan/Project.07.AUTOMA",
     },
     {
-        src: "test.png",
+        src: "cashgo-preview.png",
         title: "CashGO+",
         description: "Bank Management System via Python TUI",
         codeUrl: "https://github.com/dreyyan/Project.08.CashGO",
     },
     {
-        src: "test.png",
+        src: "welearnsms-preview.png",
         title: "WeLearn Student Management System",
         description: "WeLearn Student Portal Management System via Python TUI",
         codeUrl: "https://github.com/dreyyan/Project.Project.09.Welearn_Student_M.S",
     },
     {
-        src: "test.png",
+        src: "welearn-preview.jpg",
         title: "WeLearn",
         description: "A One-Stop Mobile Portal App for Students, Teachers, and School Management",
         codeUrl: "https://github.com/dreyyan/Project.10.WeLearn",
     },
     {
-        src: "test.png",
+        src: "tasky-preview.png",
         title: "Tasky",
         description: "An NLP-based A.I. Task Assistant",
         codeUrl: "https://github.com/dreyyan/Project.11.Tasky",
@@ -145,15 +145,9 @@ const Projects = [
     },
     {
         src: "test.png",
-        title: "Project.26.Systemate",
+        title: "Systemate",
         description: "A Java Library for Easy Console Development",
         codeUrl: "https://github.com/dreyyan/Project.26.Systemate",
-    },
-    {
-        src: "test.png",
-        title: "Personal Website",
-        description: "A Personal Website - About Me, Portfolio, and Resume",
-        codeUrl: "https://github.com/dreyyan/Project.27.PersonalWebsite",
     },
 ];
 

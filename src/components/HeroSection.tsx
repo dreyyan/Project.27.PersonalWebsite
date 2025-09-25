@@ -13,7 +13,7 @@ const HeroSection = () => {
             </div>
             
             <div className="flex gap-x-6 mb-10">
-                <PrimaryButton text="About Me" disabled={false} height="52px"/>
+                <PrimaryButton text="About Me" disabled={false} height="46px"/>
                 <TertiaryButton text="Download CV →" fontSize="16px"/>
             </div>
 

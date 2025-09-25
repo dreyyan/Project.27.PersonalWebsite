@@ -14,9 +14,15 @@ const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled
     if (href) {
         return (
             <a
+                target="_blank"
                 style={style}
                 href={href}
-                className={`btn ${disabled ? "btn-disabled" : ""}`}
+                className={`
+                    btn ${disabled ? "btn-disabled" : ""}
+                    dm-serif-display
+                    text-[var(--text-secondary)]
+                    hover:text-gray-400
+                    `}
                 onClick={(e) => disabled && e.preventDefault()}
             >
                 {text}
@@ -41,6 +47,8 @@ const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled
                 border-transparent
                 text-[var(--text-secondary)]
 
+                dm-serif-display
+
                 duration-200 ease-in-out
 
                 transition
@@ -48,7 +56,7 @@ const TertiaryButton: React.FC<TertiaryButtonProps> = ({ text, onClick, disabled
                 hover:underline
 
                 transform
-                hover:scale-102
+                hover:scale-110
 
                 cursor-pointer
                 ${disabled ? "opacity-50 cursor-not-allowed" : ""}
