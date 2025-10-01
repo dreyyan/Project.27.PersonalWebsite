@@ -11,8 +11,9 @@ const HeroSection = () => {
             <div className="max-w-[40%] mt-2 mb-6">
                 <p className="dm-serif-text text-semibold text-[16px] text-[var(--text-secondary)]">an aspiring full-stack developer and data scientist with a passion for machine learning and data analysis, looking to apply and grow my skills through real-world projects.</p>
             </div>
-            
-            <div className="flex gap-x-6 mb-10">
+
+            {/* About Me Button & Download CV */}
+            <div className="flex gap-x-6 mt-2 mb-10">
                 <PrimaryButton text="About Me" disabled={false} height="46px"/>
                 <TertiaryButton text="Download CV →" fontSize="16px"/>
             </div>

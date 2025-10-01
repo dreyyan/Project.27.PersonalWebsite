@@ -16,11 +16,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, title, description, prev
     return (
         <div className={Styles.projectCardContainer}>
             {/* Top: Image */}
-            <img src={src} className="h-[130.5px] w-auto object-contain mx-auto"/>
+            <img src={src} className="w-[100px] min-h-[136px] w-auto rounded-tl-lg rounded-tr-lg object-contain mx-auto"/>
 
             {/* Bottom: Details */}
-            <div className="max-h-[200px] px-4 py-6 bg-[var(--secondary-background)]">
-                <h4 className="dm-serif-display text-[18px] font-semibold leading-none min-h-[40px] mb-4 text-[var(--text-primary)]">{title}</h4>
+            <div className="max-h-[200px] px-4 py-6 rounded-bl-lg rounded-br-lg bg-[var(--secondary-background)]">
+                <h4 className="dm-serif-display text-[18px] font-semibold leading-none min-h-[40px] mb-1 text-[var(--text-primary)]">{title}</h4>
                 <p className="dm-serif-text text-[13px] min-h-[40px] leading-none text-[var(--text-secondary)]">{description}</p>
                 <div className="flex justify-around items-center mt-4">
                     <PrimaryButton text="Preview" disabled={false} href={previewUrl} width="100px" height="28px" borderRadius="6px"/>

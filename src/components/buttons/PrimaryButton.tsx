@@ -10,7 +10,7 @@ interface PrimaryButtonProps {
 };
 
 const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = false, href, width = "150px", height = "52px", borderRadius = "100px"}) => {
-    const fontSize = `calc(${height} * 0.6)`;
+    const fontSize = `calc(${height} * 0.5)`;
 
     const style = { width, height, borderRadius, fontSize };
         if (href) {

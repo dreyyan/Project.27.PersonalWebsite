@@ -18,7 +18,7 @@ const Styles = {
     "dm-serif-text text-[16px] font-[500] text-[var(--text-primary)]",
 
     // Components
-    projectCardContainer: "max-w-[240px] max-h-[300px] my-4 px-1 py-2 rounded-[14px] bg-[#1E1E1E]",
+    projectCardContainer: "w-1/7 p-2 my-4 px-1 py-1 rounded-[14px] bg-[#1E1E1E]",
 };
 
 export default Styles;
