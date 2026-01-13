@@ -1,5 +1,3 @@
-import Styles from "../Styles";
-
 interface SocialButtonProps {
     href?: string;
     src?: string;

@@ -1,36 +1,68 @@
 @import "tailwindcss";
 
-/* Fonts */
-.dm-serif-display {
-  font-family: 'DM Serif Display', serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-bottom: 0.75em;
 }
 
-.dm-serif-display-regular {
-  font-family: "DM Serif Display", serif;
+/* Fluid sizing with clamp */
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.1; }
+h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 600; line-height: 1.15; }
+h3 { font-size: clamp(1.5rem, 3.5vw, 1.875rem); font-weight: 600; line-height: 1.2; }
+h4 { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 600; line-height: 1.3; }
+h5 { font-size: clamp(1.125rem, 2.5vw, 1.25rem); font-weight: 500; line-height: 1.4; }
+h6 { font-size: 1rem; font-weight: 500; line-height: 1.4; }
+
+body {
+  background-color: var(--primary-background);
+}
+
+.geo-regular {
+  font-family: "Geo", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-optical-sizing: auto;
+  font-size: 1rem;       /* 16px */
+  line-height: 1.7;      /* slightly more for readability */
+  letter-spacing: 0.015em;
+  /* margin-bottom: 1em; */
 }
 
-.dm-serif-display-regular-italic {
-  font-family: "DM Serif Display", serif;
+.geo-regular-italic {
+  font-family: "Geo", sans-serif;
   font-weight: 400;
   font-style: italic;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+  margin-bottom: 1em;
 }
 
-.dm-serif-text {
-  font-family: 'DM Serif Text', serif;
-}
-
-.dm-serif-text-regular {
-  font-family: "DM Serif Text", serif;
+.small {
+  font-family: "Geo", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
-.dm-serif-text-regular-italic {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: italic;
+.caption {
+  font-family: "Geo", sans-serif;
+  font-weight: 300;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  color: #666;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Geo", sans-serif;
+  font-size: 1rem;  /* 16px */
+  line-height: 1.7;
+  margin-bottom: 1em;
 }
 
 :root {
@@ -57,9 +89,4 @@
   --text-secondary: oklch(45% 0.02 280);       /* softer muted gray */
   --icon-color: oklch(40% 0.03 280);           /* same as text-primary */
   --error: oklch(62% 0.25 30);                 /* same red (works in both) */
-}
-
-html, body {
-    height: 100vh;
-    background-color: var(--primary-background);
 }

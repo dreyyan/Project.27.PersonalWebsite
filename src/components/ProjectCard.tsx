@@ -1,8 +1,4 @@
-import Styles from "../Styles";
 import PrimaryButton from "./buttons/PrimaryButton";
-import TertiaryButton from "./buttons/TertiaryButton";
-
-import { useNavigate } from "react-router-dom";
 
 interface ProjectCardProps {
     src?: string;
@@ -14,7 +10,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ src, title, description, previewUrl, codeUrl }) => {
     return (
-        <div className={Styles.projectCardContainer}>
+        <div className="w-1/7 p-2 my-4 px-1 py-1 rounded-[14px] bg-[#1E1E1E]">
             {/* Top: Image */}
             <img src={src} className="w-[100px] min-h-[136px] w-auto rounded-tl-lg rounded-tr-lg object-contain mx-auto"/>
 
@@ -24,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, title, description, prev
                 <p className="dm-serif-text text-[13px] min-h-[40px] leading-none text-[var(--text-secondary)]">{description}</p>
                 <div className="flex justify-around items-center mt-4">
                     <PrimaryButton text="Preview" disabled={false} href={previewUrl} width="100px" height="28px" borderRadius="6px"/>
-                    <TertiaryButton text="View Code" href={codeUrl} fontSize="12px"/>
+                    {/* <TertiaryButton text="View Code" href={codeUrl} fontSize="12px"/> */}
                 </div>
             </div>
         </div>

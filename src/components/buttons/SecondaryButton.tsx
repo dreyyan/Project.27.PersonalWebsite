@@ -1,42 +1,59 @@
-interface SecondaryButtonProps {
-    text: string;
+interface PrimaryButtonProps {
+    text: string,
     onClick?: () => void;
     disabled?: boolean;
-}
+    href?: string;
 
-const SecondaryButton: React.FC<SecondaryButtonProps> = ({ text, onClick, disabled = false }) => {
+    width?: string;
+    height?: string;
+    borderRadius?: string;
+};
+
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({text, onClick, disabled = false, href, width = "150px", height = "32px", borderRadius = "100px"}) => {
+    const fontSize = `calc(${height} * 0.5)`;
+
+    const style = { width, height, borderRadius, fontSize };
+        if (href) {
+        return (
+            <a
+                href={href}
+                className={`btn ${disabled ? "btn-disabled" : ""}`}
+                onClick={(e) => disabled && e.preventDefault()}
+            >
+                {text}
+            </a>
+        );
+    }
+
     return (
-        <button
-            onClick={disabled ? undefined : onClick}
-            className={`
-                flex justify-center items-center
+        <button style={style} className="
+        flex justify-center items-center
 
-                w-[140px] h-[46px]
-                mx-[2%] my-[1%]
-                px-[2%] py-[1%]
+        mx-[0] my-[0]
+        px-[0] py-[0]
 
-                border-2
-                rounded-lg
+        bg-[var(--accent-color1)]
+        text-white
 
-                border-[var(--accent-color2)]
-                text-[var(--accent-color2)]
+        dm-serif-display
+        font-semibold
 
-                dm-serif-display
-                text-[20px]
+        duration-200 ease-in-out
 
-                duration-200 ease-in-out
+        transition
 
-                transition
-                hover:text-[var(--primary-background)]
-                hover:bg-[var(--accent-color2)]
+        hover:bg-[var(--accent-color2)]
+        hover:text-white
 
-                cursor-pointer
-                ${disabled ? "opacity-50 cursor-not-allowed" : ""}
-            `}
-        >
-            <p className="text-xl">{text}</p>
+        transform 
+        hover:scale-105 
+        hover:rotate-1 
+        
+        cursor-pointer
+        disabled:opacity-50 disabled:cursor-not-allowed
+        ">{text}
         </button>
     );
 }
 
-export default SecondaryButton;
+export default PrimaryButton;
